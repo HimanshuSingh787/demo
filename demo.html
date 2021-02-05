@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label>Enter 1st Number:</label><br>
+    <input type="number" id = "fname" ><br>
+    <label>Enter 2nd Number:</label><br>
+    <input type="number" id = "sname" ><br>
+    
+    <button onclick="sumD()">Find Sum</button>
+    <button onclick="subD()">Find Sub</button>
+    <button onclick="mulD()">Find Mul</button>
+    <button onclick="divD()">Find Div</button>
+    <br><br>
+
+
+    <label>Result : </label><br>
+    <input type="number" id = result><br>
+
+    <script>
+        
+        function sumD()
+        {
+            var a = document.getElementById("fname").value;
+            
+            var b = document.getElementById("sname").value;
+        
+        if(a == "" ||b == "")
+        {
+            alert("Number is null");
+        }
+
+        document.getElementById("result").value = parseInt(a) +parseInt(b);
+        }
+
+        function subD()
+        {
+        var a = document.getElementById("fname").value;
+        var b = document.getElementById("sname").value;
+        
+        
+        if(!a  || !b)
+        {
+            alert("Number is null");
+        }
+
+        if(b>a)
+        alert("1st Number is less");
+        else
+        document.getElementById("result").value = parseInt(a) -parseInt(b);
+        }
+
+        function mulD()
+        {
+        var a = document.getElementById("fname").value;  
+        var b = document.getElementById("sname").value;
+        if(a == "" ||b == "")
+        {
+            alert("Number is null");
+        }
+
+        document.getElementById("result").value = parseInt(a) *parseInt(b);
+        }
+
+        function divD()
+        {
+        var a = document.getElementById("fname").value;
+        var b = document.getElementById("sname").value;
+        if(a == "" ||b == "")
+        {
+            alert("Number is null");
+        }
+        document.getElementById("result").value = parseInt(a) /parseInt(b);
+        }
+
+    </script>
+
+</body>
+</html>
