@@ -1,0 +1,64 @@
+<script>
+// Edit your script here
+
+var no = prompt("Enter the Number");
+var arr = new Array();
+var a = 'A',flag = 0;
+var atemp = 0,aflag = 0,n = 1;
+
+for(var i = 0;i<no;i++)
+{
+arr[i] = String.fromCharCode((a.charCodeAt(0)+i));
+}
+
+
+
+for(var i = 0;i<(2*no-1);i++)
+{
+document.write(arr[atemp++]);
+
+for(var j = 1;j<n;j++)
+{
+
+if(aflag == 0)
+{
+if(atemp == 0)
+aflag = 1;
+else
+document.write(arr[atemp--]);
+}
+
+if(aflag == 1)
+{
+if(atemp == no)
+aflag = 0;
+else
+document.write(arr[atemp++]);
+}
+
+}
+
+//Done
+if(flag == 0)
+{
+if(n ==(2*no-1))
+flag = 1;
+
+else
+n = n+2;
+}
+
+if(flag == 1)
+{
+if(n ==0)
+flag = 0;
+
+else
+n = n-2;
+}
+
+
+document.write("<br>");
+}
+</script>
+<!-- edit your html here -->
